@@ -1,0 +1,25 @@
+.modal_window{
+    &.opened{
+        visibility: visible;
+    }
+}
+
+
+.fav_icon{
+    &.liked{
+        fill: red
+    }
+}
+
+.new_tweet_button {
+    &.clickable{
+        opacity: 100%;
+    }
+}
+
+.counter{
+    visibility: hidden;
+    &.visible{
+        visibility: visible;
+    }
+}
