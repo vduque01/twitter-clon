@@ -32,18 +32,7 @@ const initModalWindowEvents = () => {
 }
 
 
-
-
-
-// FUNCIONES DE CARLOS
-
-
-
-
-
-
-
-
+// Renderizar los tweets
 
 const renderTweets = () => {
   
@@ -96,6 +85,8 @@ const renderTweets = () => {
   initTweetEvents()
 }
 
+// Dar me gusta a los tweets
+
 const initTweetEvents = () => {
 
   const likeButtons = document.querySelectorAll(".fav_icon")
@@ -118,7 +109,7 @@ const initTweetEvents = () => {
 }
 
 
-// BUSCAR TWEETS
+// Buscar los tweets
 
 const searchInput = document.querySelector(".search_input")
 let filteredTweets = []
@@ -209,9 +200,7 @@ const renderFilteredTweets = () => {
   initTweetEvents()
 }
 
-// Eventos de crear un tweet
-
-
+// Crear un tweet
 
 let isButtonActive = false  // boolean
 let newTweetText = ""       // string
@@ -219,11 +208,6 @@ const newButton = document.querySelector(".new_tweet_button")
 const counter = document.querySelector(".counter")
 const newTweetTextArea = document.querySelector(".tweet_textarea")
 
-
-
-/**
- * Este codigo hace nose que
- */
 const initNewTweetEvents = () => {
   newButton.addEventListener("click", () => {
     if (isButtonActive) {
@@ -238,7 +222,6 @@ const initNewTweetEvents = () => {
     updateCounter()
   })
 }
-
 
 const updateCounter = () => {
   counter.innerHTML = 280 - newTweetTextArea.value.length
@@ -303,5 +286,5 @@ const createTweetAndUpdate = () => {
 
   tweetData.unshift(new_tweet)
 
-  renderTweets() // Es otro problema
+  renderTweets() 
 }
